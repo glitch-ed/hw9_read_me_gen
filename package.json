@@ -1,0 +1,19 @@
+{
+  "name": "read_gen",
+  "version": "1.0.0",
+  "description": "Generates Read ME",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glitch-ed/hw9_read_me_gen.git"
+  },
+  "author": "Eddie Villarreal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glitch-ed/hw9_read_me_gen/issues"
+  },
+  "homepage": "https://github.com/glitch-ed/hw9_read_me_gen#readme"
+}
