@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const markDown = require("./generateMarkdown.js");
+const generateMarkdown = require("./generateMarkdown.js");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -35,12 +35,13 @@ const questions = [
       {
         type: "input",
         name: "colaborators",
-        message: "PLease enter the name of any colaborators on this applicaiton including yourself."
+        message: "Please enter the name of any colaborators on this applicaiton including yourself."
       },
       {
-        type: "input",
+        type: "list",
         name: "license",
-        message: ""
+        message: "Please choose one of the following.",
+        choices: ["MIT", ]
       },
       {
         type: "input",
@@ -62,13 +63,10 @@ const questions = [
 
 // function to initialize program
 function init() {
-  return inquirer.prompt(questions)
-}
-
-// function call to initialize program
-init()
+  inquirer.prompt(questions)
   .then(function(data) {
-    const answers = markDown.data;
+
+    const answers = generateMarkdown(data);
 
     return writeFileAsync("README.md", answers);
   })
@@ -78,3 +76,11 @@ init()
   .catch(function(err) {
     console.log(err);
   });
+}
+
+// function call to initialize program
+init()
+  
+
+
+  
