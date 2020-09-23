@@ -35,7 +35,7 @@ ${data.license}
 
 Below is a link to my GitHub profile:
 
-${data.git}
+www.github.com/${data.git}
 
 If you have any questions, please feel free to email at :
 ${data.email}
