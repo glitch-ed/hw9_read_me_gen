@@ -29,13 +29,13 @@ const questions = [
       },
       {
         type: "input",
-        name: "deployment",
-        message: "Please enter the URL of your deployed application."
+        name: "colaborators",
+        message: "Please enter the name of any colaborators on this applicaiton including yourself."
       },
       {
         type: "input",
-        name: "colaborators",
-        message: "Please enter the name of any colaborators on this applicaiton including yourself."
+        name: "test",
+        message: "Describe the testing used to verify the application runs."
       },
       {
         type: "list",
@@ -71,7 +71,7 @@ function init() {
     return writeFileAsync("README.md", answers);
   })
   .then(function() {
-    console.log("Successfully wrote to README.md");
+    console.log("Your README.md file was successfully created!");
   })
   .catch(function(err) {
     console.log(err);

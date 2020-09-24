@@ -27,6 +27,9 @@ ${data.usage}
 People who I colaborated with in the development of this project:
 ${data.colaborators}
 
+## Testing
+${data.test}
+
 ## License
 
 ${data.license}
